@@ -1,11 +1,11 @@
 from agents import Agent, Runner, AsyncOpenAI, set_default_openai_client, set_default_openai_api, set_tracing_disabled
 from dotenv import load_dotenv
 import os
-import streamlit as st
+
 
 load_dotenv()
 
-gemini_api_key = "AIzaSyCeoprlbk_uge0ubQwzoV5I_uS3fBRnNRU"
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 external_client = AsyncOpenAI(
     api_key = gemini_api_key ,
@@ -27,6 +27,5 @@ def run_global():
         agent,
         "JF-17 Thunder vs Rafael. One word answer."
     )
-    print(result.final_output)
 
-    st.header("My_Agent")
+    print(result.final_output)
