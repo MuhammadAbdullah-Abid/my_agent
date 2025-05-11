@@ -2,11 +2,10 @@ from agents import Agent, Runner, AsyncOpenAI, set_default_openai_client, set_de
 from dotenv import load_dotenv
 import os
 import streamlit as st
-from openai import AsyncOpenAI
 
 load_dotenv()
 
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+gemini_api_key = "AIzaSyCeoprlbk_uge0ubQwzoV5I_uS3fBRnNRU"
 
 external_client = AsyncOpenAI(
     api_key = gemini_api_key ,
