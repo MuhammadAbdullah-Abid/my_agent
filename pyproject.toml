@@ -15,7 +15,6 @@ dependencies = [
 [project.scripts]
 my-agent = "my_agent:main"
 run_global = "my_agent.global_config:run_global"
-stream_lit_app = "my_agent.script:app"
 
 [build-system]
 requires = ["hatchling"]
